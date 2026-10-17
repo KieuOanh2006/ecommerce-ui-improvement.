@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giao diện minh họa tìm kiếm và lọc sản phẩm bằng HTML5 và CSS3.">
+  <title>Tìm kiếm sản phẩm | Shop Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Shop Demo - Trang chủ">SHOP<span>DEMO</span></a>
+      <p class="header-note">Tìm sản phẩm phù hợp với bạn</p>
+    </div>
+  </header>
+
+  <main class="container page-main">
+    <section class="search-section" aria-labelledby="page-title">
+      <p class="eyebrow">KHÁM PHÁ SẢN PHẨM</p>
+      <h1 id="page-title">Bạn đang tìm gì hôm nay?</h1>
+      <form class="search-form" role="search" action="#" method="get">
+        <label class="visually-hidden" for="keyword">Từ khóa tìm kiếm</label>
+        <input id="keyword" name="q" type="search" placeholder="Nhập tên sản phẩm..." autocomplete="off">
+        <button type="submit">Tìm kiếm</button>
+      </form>
+    </section>
+
+    <section class="filter-section" aria-labelledby="filter-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="filter-title">Lọc sản phẩm</h2>
+          <p>Chọn tiêu chí để thu hẹp lựa chọn</p>
+        </div>
+        <span class="filter-label">BỘ LỌC MẪU</span>
+      </div>
+      <form id="filter-form"></form>
+      <div class="filter-grid">
+        </form>
+        <div class="filter-field">
+          <label for="min-price">Khoảng giá</label>
+          <div class="price-inputs">
+            <input id="min-price" type="number" min="0" placeholder="Từ (đ)">
+            <span aria-hidden="true">–</span>
+            <input id="max-price" type="number" min="0" placeholder="Đến (đ)">
+          </div>
+        </div>
+        <div class="filter-field">
+          <label for="brand">Thương hiệu</label>
+          <select id="brand" name="brand">
+            <option value="">Tất cả thương hiệu</option>
+            <option>Basic Wear</option>
+            <option>Urban Step</option>
+            <option>Daily Bag</option>
+            <option>SoundGo</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="color">Màu sắc</label>
+          <select id="color" name="color">
+            <option value="">Tất cả màu sắc</option>
+            <option>Trắng</option>
+            <option>Đen</option>
+            <option>Be</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="size">Kích cỡ</label>
+          <select id="size" name="size">
+            <option value="">Tất cả kích cỡ</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+        </div>
+      </div>
+      <div class="filter-actions">
+    <button type="button" class="apply-filter-button">
+        Áp dụng bộ lọc
+    </button>
+
+    <button type="reset" class="reset-filter-button" form="filter-form">
+        Xóa lựa chọn
+    </button>
+</div>
+      <p class="filter-note">Lưu ý: bộ lọc là phần minh họa giao diện, chưa thực hiện lọc dữ liệu.</p>
+    </section>
+
+    <section class="products-section" aria-labelledby="products-title">
+      <div class="section-heading products-heading">
+        <div>
+          <h2 id="products-title">Sản phẩm gợi ý</h2>
+          <p>4 sản phẩm mẫu để minh họa bố cục</p>
+        </div>
+        <span class="result-count">04 sản phẩm</span>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <a class="product-image image-tshirt" href="#product-1" aria-label="Xem chi tiết Áo thun cơ bản">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Áo thun trắng cơ bản" loading="lazy">
+            <span class="product-tag">BÁN CHẠY</span>
+          </a>
+          <div class="product-info">
+            <p class="product-category">Thời trang</p>
+            <h3><a href="#product-1">Áo thun cotton cơ bản</a></h3>
+            <p class="product-description">Thiết kế đơn giản, dễ phối đồ hằng ngày.</p>
+            <div class="product-bottom">
+              <p class="product-price">129.000đ</p>
+              <span class="old-price">179.000đ</span>
+            </div>
+            <a class="product-button" id="product-1" href="#product-1">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image" href="#product-2" aria-label="Xem chi tiết Giày thể thao">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Giày thể thao phong cách năng động" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">Giày dép</p>
+            <h3><a href="#product-2">Giày thể thao năng động</a></h3>
+            <p class="product-description">Phù hợp cho đi học, đi làm và dạo phố.</p>
+            <div class="product-bottom">
+              <p class="product-price">399.000đ</p>
+              <span class="old-price">499.000đ</span>
+            </div>
+            <a class="product-button" id="product-2" href="#product-2">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image" href="#product-3" aria-label="Xem chi tiết Túi đeo vai">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Túi đeo vai màu trung tính" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">Phụ kiện</p>
+            <h3><a href="#product-3">Túi đeo vai tối giản</a></h3>
+            <p class="product-description">Kiểu dáng gọn nhẹ, tiện dụng khi ra ngoài.</p>
+            <div class="product-bottom">
+              <p class="product-price">259.000đ</p>
+              <span class="old-price">320.000đ</span>
+            </div>
+            <a class="product-button" id="product-3" href="#product-3">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <a class="product-image" href="#product-4" aria-label="Xem chi tiết Tai nghe không dây">
+            <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Tai nghe không dây màu trắng" loading="lazy">
+          </a>
+          <div class="product-info">
+            <p class="product-category">Điện tử</p>
+            <h3><a href="#product-4">Tai nghe không dây</a></h3>
+            <p class="product-description">Thiết kế nhỏ gọn cho nhu cầu nghe nhạc.</p>
+            <div class="product-bottom">
+              <p class="product-price">499.000đ</p>
+              <span class="old-price">599.000đ</span>
+            </div>
+            <a class="product-button" id="product-4" href="#product-4">Xem chi tiết</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Giao diện minh họa học tập · Xây dựng bằng HTML5 và CSS3</p>
+    </div>
+  </footer>
+</body>
+</html>
