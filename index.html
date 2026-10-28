@@ -88,13 +88,27 @@
     </section>
 
     <section class="products-section" aria-labelledby="products-title">
-      <div class="section-heading products-heading">
-        <div>
-          <h2 id="products-title">Sản phẩm gợi ý</h2>
-          <p>4 sản phẩm mẫu để minh họa bố cục</p>
-        </div>
-        <span class="result-count">04 sản phẩm</span>
-      </div>
+     
+
+<div class="section-heading products-heading">
+  <div>
+    <h2 id="products-title">Sản phẩm gợi ý</h2>
+    <p>4 sản phẩm mẫu để minh họa bố cục</p>
+  </div>
+
+  <div class="product-toolbar">
+    <label for="sort-by">Sắp xếp theo:</label>
+
+    <select id="sort-by" name="sort-by">
+      <option value="relevance">Sự liên quan</option>
+      <option value="best-selling">Bán chạy nhất</option>
+      <option value="price-asc">Giá tăng dần</option>
+      <option value="price-desc">Giá giảm dần</option>
+    </select>
+
+    <span class="result-count">04 sản phẩm</span>
+  </div>
+</div>
 
       <div class="product-grid">
         <article class="product-card">
